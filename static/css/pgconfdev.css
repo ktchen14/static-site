@@ -1,0 +1,790 @@
+/********
+ * Global fonts
+ ********/
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://assets.postgresql.eu/fonts/montserrat/Montserrat-Regular.woff) format('woff2');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://assets.postgresql.eu/fonts/montserrat/Montserrat-Bold.woff) format('woff2');
+}
+
+/********
+ * Global styles
+ ********/
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #616161;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+h1, h2, h3, h4 {
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h1 {
+    color: #616161;
+    text-align: center;
+    font-size: 36px;
+}
+
+h2 {
+    letter-spacing: 1px;
+    text-align: left;
+    font-size: 28px;
+}
+
+h3 {
+    letter-spacing: 1px;
+    text-align: left;
+    font-size: 24px;
+}
+
+h4 {
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+h4 small {
+    font-size: 75%;
+    color: #777;
+    font-weight: normal;
+}
+
+small {
+    font-size: 85%;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    font-size: 17px; /* XXX: make responsive! */
+}
+
+p.lead {
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    font-size: 21px; /* XXX: make responsive! */
+}
+
+li {
+    font-size: 17px; /* Same as P */
+}
+
+.text-left, #main-content p.text-left {
+    text-align: left;
+}
+.text-center, #main-content p.text-center {
+    text-align: center;
+}
+.text-justify, #main-content p.text-justify {
+    text-align: justify;
+}
+.strike {
+    text-decoration: line-through;
+}
+.gap-bottom {
+    margin-bottom: 4rem;
+}
+
+.deadline {
+  color: red;
+  font-size: large;
+  vertical-align: super;
+}
+
+/********
+ * Logo styles
+ ********/
+div#topbarlogo img.conflogo {
+  width: 200px;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+div#indexlogo {
+  text-align: center;
+}
+div#indexlogo img.conflogo {
+  width:80%;
+  padding-top: 20px;
+}
+
+/********
+ * Bootstrap-similar items
+ ********/
+.label {
+    display: inline;
+    color: #fff;
+    text-align: center;
+    whitespace: nowrap;
+    border-radius: 0.25em;
+    font-weight: 700;
+    font-size: 75%;
+    line-height: 1;
+    vertical-align: baseline;
+    padding: .2em .6em .3em;
+}
+.label-warning {
+    background-color: #f0ad4e;
+}
+.label-danger {
+    background-color: #d9534f;
+}
+.label-primary {
+    background-color: #337ab7;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+.btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px;
+}
+.btn-green {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+.btn-blue {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.btn:hover {
+    text-decoration: none;
+}
+
+
+/********
+ * Responsive layout utilities
+ ********/
+@media (max-width: 1200px) {
+    .nosmall {
+        display: none !important;
+    }
+}
+@media (min-width: 1200px) {
+    .nobig {
+        display: none !important;
+    }
+}
+
+/********
+ * Main grid and nav
+ ********/
+body {
+    margin: 0px;
+}
+
+div#main-grid {
+    margin: auto;
+    max-width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "main";
+}
+
+div#main-nav {
+    grid-area: header;
+    background-color: #033c6b;
+    align-self: center;
+}
+
+div#main-nav nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+        "nav-left nav-center nav-right"
+        "nav-lower . .";
+}
+
+div#main-nav nav a {
+    color: #fafafa;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+div#main-nav nav div a {
+    padding: 10px 0;
+    margin-left: 15px;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+div#main-nav nav div.nav-center a {
+    transition: .3s all ease-in-out;
+    padding: 1rem 1rem;
+    display: inline-block;
+    text-align: left;
+}
+
+div#main-nav nav div.nav-center a:hover {
+    opacity: .7;
+    background-color: white;
+    color: #033c6b;
+}
+
+.nav-left {
+    grid-area: nav-left;
+    align-self: center;
+}
+
+.nav-center {
+    grid-area: nav-center;
+    align-self: center;
+    text-align: right;
+}
+
+/* Nav burger-menu */
+label#burger-menu-label {
+    font-size: 24px;
+    color: #fafafa;
+    margin-left: 20px;
+    display: none;
+    cursor: pointer;
+}
+input#nav-toggle {
+    display: none;
+}
+@media (max-width: 1200px) {
+    label#burger-menu-label {
+        display: inline-block;
+        grid-area: nav-right;
+        align-self: center;
+        padding: 1rem;
+        margin-left: 10px;
+    }
+    div#main-nav nav div.nav-center {
+        display: none;
+    }
+    #nav-toggle:checked ~ .nav-center {
+        display: grid;
+        grid-area: nav-lower;
+    }
+}
+@media (min-width: 1200px) {
+    .nav-center {
+        margin-right: 5rem;
+    }
+}
+
+
+
+/********
+ * Content grid
+ ********/
+div#content-grid {
+    grid-area: main;
+    overflow: auto;
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "content" "sponsors" "footer";
+}
+
+@media (min-width: 1200px) {
+    div#content-grid {
+        grid-gap: 1rem;
+        column-gap: 5rem;
+        grid-template-columns: 1fr 700px 250px 1fr;
+        grid-template-rows: min-content auto min-content;
+        grid-template-areas:
+            ".      content sponsors ."
+            ".      content .        ."
+            "footer footer  footer   footer";
+    }
+}
+
+div#main-content {
+    grid-area: content;
+    max-width: 700px;
+    justify-self: center;
+    margin: 30px;
+    margin-top: 20px;
+}
+
+div#main-content img {
+    max-width: 100%;
+}
+
+div#main-content p {
+    text-align: justify;
+    hyphens: auto;
+}
+
+/********
+ * Sponsors sidebar
+ ********/
+div#sponsor-sidebar {
+    grid-area: sponsors;
+    background-color: #eeeeee;
+    border-radius: 15px;
+    padding: 15px;
+    justify-self: center;
+    max-width: 250px;
+    margin-top: 20px;
+}
+
+div#sponsor-sidebar h4 a {
+    color: #616161;
+}
+
+div#sponsor-sidebar h4 {
+    text-align: center;
+}
+
+div#sponsor-sidebar img {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 225px;
+    vertical-align: middle;
+    border: 0;
+}
+
+div#sponsor-sidebar p.silversidebar {
+  text-align: center;
+}
+
+/********
+ * Footer
+ ********/
+footer#footer {
+    grid-area: footer;
+    background-color: #033c6b;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "ftop"
+        "f1"
+        "f2"
+        "f3";
+    align-self: flex-end;
+}
+@media (min-width: 1200px) {
+    footer#footer {
+        grid-template-columns: 1fr 250px 250px 250px 1fr;
+        grid-template-areas:
+            "ftop ftop ftop ftop ftop"
+            ".    f1   f2   f3   .";
+    }
+}
+footer h4 {
+    grid-area: ftop;
+    text-align: center;
+    color: #fafafa;
+}
+footer ul {
+    text-align: center;
+    list-style: none;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+footer ul li a {
+    color: #fafafa;
+}
+footer ul#f1 {
+    grid-area: f1;
+}
+footer ul#f2 {
+    grid-area: f2;
+}
+footer ul#f3 {
+    grid-area: f3;
+}
+
+
+/********
+ * Utility grids
+ ********/
+div.thumbnailwrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+    justify-content: center;
+}
+div.thumbnailwrap div.thumbnail {
+    flex-basis: 160px;
+    margin: 10px;
+    border: 1px solid lightgray;
+    padding: 15px;
+    text-align: center;
+}
+div.thumbnailwrap div.thumbnail img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+div.thumbnailwrap div.thumbnail div.caption {
+    text-align: left;
+}
+
+/********
+ * confreg global overrides
+ ********/
+h1 span.confheader {
+    display: none;
+}
+
+/********
+ * / page
+ ********/
+body.index {
+    /* Image credit: https://flickr.com/photos/isabelle_puaut/11343245996/ */
+    background-image: url("/static/img/vancouver_2023.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+div#indexwrap {
+    background-color: rgba(0,0,0,0.7);
+    font-size: 17px;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
+div#indexwrap h1 {
+    color: #fff;
+}
+div#indexwrap h2 {
+    text-align: center;
+    text-transform: none;
+}
+div#newsContainer div.newsTitle {
+    font-weight: 700;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+div#newsContainer div.newsDate {
+    font-size: 0.8em;
+    margin-bottom: 4px;
+    text-align: center;
+}
+p.indexsocials {
+  text-align: center !important;
+  font-size: 1.5em;
+}
+p.indexsocials a {
+  color: #ffffff;
+}
+
+
+/********
+ * /sponsors/ page
+ ********/
+div.goldwrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.goldwrap div.goldsponsor {
+    flex-basis: 260px;
+    height: auto;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+}
+div.goldwrap div.goldsponsor img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+div.goldwrap p.description {
+    font-style: italic;
+}
+div.silverwrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.silverwrap div.silversponsor {
+    flex-basis: 260px;
+    height: auto;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+}
+div.silverwrap div.silversponsor img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+div.silverwrap strong {
+    font-size: 1.5em;
+}
+
+div.silverwrap p.description {
+    font-style: italic;
+}
+
+div.supporterwrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.supporterwrap div.supporter {
+    flex-basis: 130px;
+    height: 125px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+}
+div.supporterwrap div.partner img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+/********
+ * Registration info
+ ********/
+table.regtypes {
+    border: 1px solid #ddd;
+    border-spacing: 0;
+}
+table.regtypes thead th {
+    text-align: left;
+    padding: 8px;
+}
+table.regtypes thead th:first-child {
+    text-align: center;
+}
+table.regtypes tbody td {
+    padding: 8px;
+}
+table.regtypes thead tr {
+    background-color: #d9edf7;
+}
+table.regtypes tbody tr:nth-child(2n) {
+    background: white;
+}
+table.regtypes tbody tr:nth-child(2n+1) {
+    background: #dff0d8;
+}
+table.cancellation {
+    border: 1px solid black;
+    min-width: 50%;
+    margin: 1rem auto;
+}
+table.cancellation thead tr {
+    background-color: rgb(17, 69, 126);
+    color: white;
+}
+table.cancellation td {
+    padding: 0.25rem 0.5rem;
+}
+table.cancellation tbody tr td:last-child {
+    text-align: center;
+}
+
+/********
+ * Registration page ugly overwrtes
+ ********/
+div.regleft {
+    width: auto !important;
+}
+div.regright {
+    width: auto !important;
+}
+div#main-content form.pgeuregform p {
+    /* Left-justify text in regform parts */
+    text-align: left;
+}
+
+/********
+ * Feedback
+ ********/
+div.feedbackRowHead {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 2em;
+    margin-bottom: 0.2em;
+}
+
+div.feedbackRowField textarea {
+    width: 100%;
+}
+
+div.feedbackRow {
+    padding-right: 1.5em;
+}
+
+fieldset.feedbackfieldset {
+    margin-bottom: 1.5em;
+}
+
+table#feedback_table tr td textarea {
+    width: 100%;
+}
+
+table#feedback_table tr th,
+table#feedback_table tr td {
+    padding-bottom: 2rem;
+}
+
+/********
+ * Schedule
+ ********/
+section.schedule {
+    width: 100%;
+    grid-gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+section.schedule div.room-name {
+    display: none;
+}
+
+/* All breaks cover 3 rooms, not the full width*/
+section.schedule article.room-all {
+    grid-column: 2/5
+}
+/* Except for on the first day, when they only cover 2 rooms! */
+section.schedule-20240528 article.room-all {
+    grid-column: 2/4;
+}
+
+article.session {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+section.schedule h1 {
+    grid-column: times;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+span.session-room {
+    font-size: 0.7rem;
+    font-style: italic;
+}
+
+div.session-header {
+    background-color: #ddd;
+    color: #000;
+    padding: 6px;
+}
+
+div.session-content {
+    padding: 6px;
+}
+
+div.session-content div.session-title {
+    font-weight: 700;
+}
+div.session-content div.session-title a {
+    color: inherit;
+}
+div.session-content ul.speakerlist {
+    list-style: none;
+    padding: 0;
+    margin-top: 3px;
+    font-style: italic;
+}
+div.session-content ul.speakerlist li a {
+    color: inherit;
+}
+
+@media screen and (min-width: 768px) {
+    section.schedule div.room-name {
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+    section.schedule {
+        display: inline-grid;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section.schedule div.room-name-int {
+        display: block;
+    }
+    section.schedule[data-roomcount="1"] h1.time-header {
+        display: none;
+    }
+    article.session {
+        margin-bottom: 1rem;
+    }
+}
+
+article.track-talk {
+    background-color: #2aa198;
+    color: #ffffff;
+}
+
+article.track-social {
+    background-color: #ffffee;
+    color: #000000;
+}
+
+article.track-workshop {
+    background-color: #e69f00;
+    color: #000000;
+}
+
+article.track-summit {
+    background-color: #D55E00;
+    color: #F4F5F0;
+}
+
+article.track-unconference {
+    background-color: #F0E442;
+    color: #0B0A10;
+}
+
+
+/* Sessions spanning multiple entries */
+article.session-187, article.session-40 {
+    grid-row-end: span 3
+}

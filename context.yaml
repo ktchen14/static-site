@@ -1,0 +1,152 @@
+full_name: PostgreSQL Development Conference
+short_name: PGConf.dev
+year: '2024'
+city: Vancouver
+country: Canada
+date_hr: May&nbsp;28-31
+
+conference_over: true
+registration_open: false
+deadline_over: true
+
+cfp_deadline: 'Monday, January 15'
+cfp_deadline_tz: PST
+cfp_response: '2024-01-31'
+cfp_state: past
+cfp_url: https://www.pgevents.ca/events/pgconfdev2024/callforpapers/
+
+normal_price: $400 CAD
+student_price: $70 CAD
+event_soldout: false
+waitlist_activated: false
+
+cfs_open: true
+cfs_signup_url: https://www.pgevents.ca/events/sponsor/signup/pgconfdev2024/
+
+schedule_public: true
+social_event_public: false
+feedback_public: true
+five_wk_cancel_date: '2024-04-23'
+five_wk_cancel_refund: the full cost
+three_wk_cancel_date: '2024-05-07'
+three_wk_cancel_refund: 50%
+two_wk_cancel_date: '2024-05-14'
+two_wk_cancel_refund: 25%
+lttwo_wk_cancel_date: '2024-05-14'
+admin_fee: $30 CAD
+linkbase: https://2024.pgconf.dev/
+mediabase: https://2024.pgconf.dev/
+newsurl: https://www.pgevents.ca/feeds/conf/pgconfdev2024/
+guidelineurl: https://www.postgresql.org/community/recognition/#conferences
+scheduleurl: https://www.pgevents.ca/events/pgconfdev2024/schedule/
+sessionsurl: https://www.pgevents.ca/events/pgconfdev2024/sessions/
+feedbackurl: https://www.pgevents.ca/events/pgconfdev2024/feedback/
+regurl: https://www.pgevents.ca/events/pgconfdev2024/register/
+venue:
+  name: Vancouver Campus of Simon Fraser University
+  image: sfu.jpg
+cfp_committee:
+- name: Amit Kapila
+  company: Fujitsu
+  image: akapila.jpg
+- name: Jonathan Katz
+  company: AWS
+  image: jkatz.png
+- name: Melanie Plageman
+  company: Microsoft
+  image: mplageman.jpg
+- name: Noah Misch
+  company: Google
+  image: nmisch.jpg
+- name: Paul Ramsey
+  company: Crunchy Data
+  image: pramsey.jpg
+gold:
+  - url: https://tembo.io
+    name: Tembo
+    intro: Tembo is the Postgres developer platform for building every data service. We collapse the database sprawl and empower users with a high-performance, fully-extensible managed Postgres service.
+    image: tembo.png
+  - url: https://azure.microsoft.com/products/postgresql/
+    name: Microsoft
+    intro: At Microsoft, our Postgres team is focused on contributing to the advancement of Postgres—by contributing to new PostgreSQL releases, by providing the Azure Database for PostgreSQL and Azure Cosmos DB for PostgreSQL managed services, and by innovating on Citus, Patroni, PgBouncer, pgcopydb, & more.
+    image: microsoft.png
+  - url: https://cloud.google.com/alloydb
+    name: Google
+    image: google.png
+    intro: Google's Data Cloud embraces open standards. AlloyDB boosts PostgreSQL's performance, availability, and scalability. Cloud SQL provides a fully managed PostgreSQL experience. Spanner's PostgreSQL interface extends Spanner's global consistency and virtually unlimited scale to the PostgreSQL world.
+  - url: https://aws.amazon.com/
+    name: AWS
+    intro: Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud platform, offering over 240 fully featured services from data centers globally.
+    image: aws.png
+silver:
+  - url: https://www.crunchydata.com
+    name: Crunchy Data
+    intro: Crunchy Data allows companies to build with confidence as the leading provider of trusted open source PostgreSQL and enterprise technology, support and training. Crunchy Data offers Crunchy Certified PostgreSQL, the most advanced and true open source RDBMS on the market.
+    image: crunchy_data.png
+  - url: https://pganalyze.com
+    name: pganalyze
+    intro: pganalyze enables engineering teams to deliver consistent Postgres performance and availability, both in the cloud and on-premises. pganalyze detects slow query plans, and provides intelligent tuning advisors for indexes and VACUUM tuning, that can be introspected and configured for each workload.
+    image: pganalyze.png
+  - url: https://www.postgresql.fastware.com
+    name: Fujitsu Enterprise Postgres
+    intro: Discover the power of 100% native Postgres enriched with enhanced core features for business success. Fujitsu Postgres Enterprise is cross-platform and stands out as the only PostgreSQL with inbuilt security features, available as a multi-architecture Operator Container for true Hybrid Cloud.
+    image: fujitsu.png
+  - url: https://www.red-gate.com/
+    name: Redgate Software
+    intro: Redgate is the leading provider of software solutions for Compliant Database DevOps. We've specialized in database software for over 20 years. Now, our products help more than 800,000 people in every type of organization around the world, from small businesses to 91% of the Fortune 100.
+    image: redgate.png
+  - url: https://www.enterprisedb.com/
+    name: EDB
+    intro: EDB provides enterprise software and services for leveraging Postgres, the leading open-source database. As a top contributor to PostgreSQL, EDB ensures high availability, security, and 24x7 global support, on-premises and in the cloud. 
+    image: edb.png
+  - url: https://supabase.com
+    name: Supabase
+    image: supabase.png
+bronze:
+  - url: https://www.sraoss.co.jp/index_en/
+    name: SRA OSS LLC
+    image: sra_oss.png
+  - url: https://pgexperts.com/
+    name: PGX, Inc.
+    image: pgx.png
+  - url: https://xata.io
+    name: Xata
+    image: xata.png
+organisers:
+  people:
+  - name: Amit Kapila
+    affiliation: Fujitsu
+    image: akapila.jpg
+  - name: Dan Langille
+    affiliation: ''
+    image: dvl.png
+  - name: Jonathan Katz
+    affiliation: AWS
+    image: jkatz.png
+  - name: Daniel Gustafsson
+    affiliation: Microsoft
+    image: daniel_gustafsson.jpg
+  - name: Magnus Hagander
+    affiliation: Redpill Linpro
+    image: magnus_hagander.jpg
+  - name: Melanie Plageman
+    affiliation: Microsoft
+    image: mplageman.jpg
+  - name: Paul Ramsey
+    affiliation: Crunchy Data
+    image: pramsey.jpg
+  - name: Steve Singer
+    affiliation: Nav Technologies
+    image: ssinger.jpg
+
+# Cancellation terms
+cancellation:
+  dates:
+    - on_or_before: 2024-04-23
+      description: 100%
+    - on_or_before: 2024-05-07
+      description: 50%
+    - on_or_before: 2024-05-14
+      description: 25%
+  finaldate: 2024-05-15
+  admin_fee: $30 CAD
