@@ -8,6 +8,8 @@
 /requirements.txt site-ignore
 /tasks.py site-ignore
 
+/base.html.j2 site-ignore
+
 # Basic .gitattributes for a python repo.
 
 # Source files
