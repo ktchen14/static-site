@@ -8,16 +8,17 @@
 <meta name="author" content="Slonik Events Canada">
 <title>{{ title }} - {{ short_name }} {{ year }}</title>
 
-<link href="{{ "static/main.css" | link }}" rel="stylesheet" type="text/css">
+<link href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700" rel="stylesheet">
+<link href="{{ "static/main.css" | link }}" rel="stylesheet">
 
+{# Iconography #}
 <link rel="apple-touch-icon" sizes="180x180" href="{{ "static/img/icons/apple-touch-icon.png" | link }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ "static/img/icons/favicon-16x16.png" | link }}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ "static/img/icons/favicon-32x32.png" | link }}">
 
-{# Mastodon site verification #}
-<link href="https://mastodon.social/@pgconfdev" rel="me">
-
+{# Facebook #}
 {% block ogptitle %}<meta property="og:title" content="{{ full_name }} {{ year }}">{% endblock %}
 {% block ogptype %}<meta property="og:type" content="website">{% endblock %}
 {% block ogpurl %}<meta property="og:url" content="https://{{ year }}.pgconf.dev/">{% endblock %}
@@ -31,10 +32,12 @@
   <meta property="og:image:alt" content="{{ full_name }} {{ year }}">
 {% endblock %}
 
-{% block twittercard %}
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@pgconfdev">
-{% endblock %}
+{# Twitter #}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@pgconfdev">
+
+{# Mastodon #}
+<link href="https://mastodon.social/@pgconfdev" rel="me">
 
 {% block head %}{% endblock %}
 
