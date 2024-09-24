@@ -2,24 +2,45 @@
 
 ## Setup
 
-Clone the repository and `cd` into it:
+1. Clone the repository and `cd` into it:
 
-```bash
-git clone git@github.com:ktchen14/static-site.git
-cd static-site
-```
+   ```bash
+   git clone git@github.com:ktchen14/static-site.git
+   cd static-site
+   ```
 
-If you have [direnv](https://direnv.net), then you just need to authorize the
-bundled `.envrc`. Otherwise, create a virtualenv and activate it:
+2. If you have [direnv](https://direnv.net), then you just need to authorize the
+   bundled `.envrc`:
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip3 install --upgrade pip
-```
+   ```bash
+   direnv allow
+   ```
 
-Install dependencies:
+   Otherwise, create a virtualenv and activate it:
 
-```bash
-pip3 install -r requirements.txt
-```
+   ```bash
+   python3 -m venv .venv
+   . .venv/bin/activate
+   pip3 install --upgrade pip
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   pip3 install -r requirements.txt
+   ```
+
+4. Verify that [Invoke](https://www.pyinvoke.org/) is runnable:
+
+   ```bash
+   $ invoke -l
+   Available tasks:
+
+     render   Render the static site (into `site`)
+     server   Open an HTTP server to serve the rendered site
+   ```
+
+## Rendering the Site
+
+Use the `invoke render` command to render
+Use `invoke render` to render the site.
