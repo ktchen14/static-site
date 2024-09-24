@@ -75,4 +75,10 @@ To ensure that the site looks as expected when it's served from an actual web
 server, use the `invoke server` command to open an HTTP server that will serve
 the `site` subdirectory.
 
+## Publishing
+
+Simply push to the `main` branch to publish the site. The "[Deploy to GitHub
+Pages]" workflow in GitHub Actions listens for changes on this branch.
+
 [Invoke]: https://www.pyinvoke.org/
+[Deploy to GitHub Pages]: https://github.com/ktchen14/static-site/actions/workflows/main.yaml
