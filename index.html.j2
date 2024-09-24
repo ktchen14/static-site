@@ -1,44 +1,50 @@
-{%extends "base.html"%}
-{%block title%}{{ full_name }} {{ year }}{%endblock%}
-{%block bodyclass%}class="index"{%endblock%}
-{%block content%}
-<div id="indexwrap">
-  <div id="indexlogo">
-    <img src="{{media("img/inlinelogo.png")}}" class="conflogo" alt="PGConf.dev">
+{% set title = "Main Page" %} 
+{% extends "base.html.j2" %}
+
+{% block head %}
+  <link href="{{ "static/index.css" | link }}" rel="stylesheet" type="text/css">
+
+  <script src="{{ "static/js/pgconfdev.js" | link }}"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      update_frontpage_news('{{ newsurl }}json/');
+    });
+  </script>
+{% endblock %}
+
+{% block main %}
+  <div class="logo">
+    <img src="{{ "static/img/inlinelogo.png" | link }}" alt="PGConf.dev">
   </div>
+
   <h1>{{ full_name }} {{ year }}</h1>
   <h2>{{ date_hr }} - {{ city }}, {{ country }}</h2>
-  <p class="indexsocials">
-    <a class="sm-twitter" href="https://twitter.com/pgconfdev"><i class="fa-brands fa-x-twitter"></i></a>&nbsp;
-    <a class="sm-mastodon" href="https://mastodon.social/@pgconfdev" rel="me"><i class="fa-brands fa-mastodon"></i></a>
+
+  <p class="social">
+    <a href="https://twitter.com/pgconfdev">
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+
+    &nbsp;
+
+    <a href="https://mastodon.social/@pgconfdev" rel="me">
+      <i class="fa-brands fa-mastodon"></i>
+    </a>
   </p>
+
   <p class="lead">
-    {{ full_name }} {{year}} ({{short_name}} {{year}}) is where users,
+    {{ full_name }} {{ year }} ({{ short_name }} {{ year }}) is where users,
     developers, and community organizers come together to focus on
     <a href="https://www.postgresql.org">PostgreSQL</a> development and
     community growth.
-  </p>
-  <p>
-    Meet PostgreSQL contributors, learn about upcoming features, and discuss
-    development problems with PostgreSQL enthusiasts.
-  </p>
-  <p>
-    {{ short_name }} {{year}} {%if conference_over %}was{%else%}will be{%endif%} held in {{ city }}, {{ country }},
-    on {{ date_hr }} at the {{ venue.name }}.
-  </p>
-  <h2>Latest news</h2>
-  <div id="newsContainer">
-  </div>
-</div>
-{%endblock%}
 
-{%block pagescript%}
-{%if newsurl%}
-<script src="{{media("js/pgconfdev.js")}}"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  update_frontpage_news('{{ newsurl }}json/');
-});
-</script>
-{%endif%}
+  <p>Meet PostgreSQL contributors, learn about upcoming features, and discuss
+    development problems with PostgreSQL enthusiasts.
+
+  <p>{{ short_name }} {{ year }} will be held in {{ city }}, {{ country }}, on
+    {{ date_hr }} at the {{ venue.name }}.
+
+  <div id="newsContainer">
+    <h2>Latest news</h2>
+  </div>
 {%endblock%}
