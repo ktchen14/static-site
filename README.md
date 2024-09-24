@@ -80,5 +80,13 @@ the `site` subdirectory.
 Simply push to the `main` branch to publish the site. The "[Deploy to GitHub
 Pages]" workflow in GitHub Actions listens for changes on this branch.
 
-[Invoke]: https://www.pyinvoke.org/
+## Contributing
+
+1. Write all prose in [Standard Canadian English].
+
+2. In general, follow the [Google HTML/CSS Style Guide].
+
 [Deploy to GitHub Pages]: https://github.com/ktchen14/static-site/actions/workflows/main.yaml
+[Google HTML/CSS Style Guide]: https://google.github.io/styleguide/htmlcssguide.html
+[Invoke]: https://www.pyinvoke.org/
+[Standard Canadian English]: https://en.wikipedia.org/wiki/Standard_Canadian_English
