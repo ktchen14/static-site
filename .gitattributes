@@ -2,6 +2,7 @@
 .gitattributes site-ignore
 .gitignore site-ignore
 
+/.github/** site-ignore
 /LICENSE site-ignore
 /README.md site-ignore
 /context.yaml site-ignore
