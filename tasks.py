@@ -72,7 +72,7 @@ def render(c, relative_to=None):
 
         if relative_to is not None:
             return os.path.join(relative_to, target.relative_to("/"))
-        return target.relative_to(origin, walk_up=True)
+        return os.path.relpath(target, origin)
 
     # Create the Jinja2 environment and context
     environment = Environment(loader=FileSystemLoader("."))
