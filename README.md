@@ -1,5 +1,8 @@
 # PGConf.dev Static Site
 
+This project contains both the content of the PGConf.dev static site as well as
+the tooling required to render it. All tasks are executed through [Invoke].
+
 ## Setup
 
 1. Clone the repository and `cd` into it:
@@ -44,3 +47,5 @@
 
 Use the `invoke render` command to render
 Use `invoke render` to render the site.
+
+[Invoke]: https://www.pyinvoke.org/
